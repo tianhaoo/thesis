@@ -45,7 +45,7 @@
                         </ul>   
                         <ul class="location">
                             <li><span class="glyphicon glyphicon-envelope"></span></li>
-                            <li><a href="mailto:info@example.com">360726539@qq.com</a></li>
+                            <li><a href="mailto:360726539@qq.com">360726539@qq.com</a></li>
                             <div class="clearfix"></div>
                         </ul>                       
                     </address>
