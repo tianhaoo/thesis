@@ -35,17 +35,17 @@
                     <address>
                         <ul class="location">
                             <li><span class="glyphicon glyphicon-map-marker"></span></li>
-                            <li>CENTER FOR FINANCIAL ASSISTANCE TO DEPOSED NIGERIAN ROYALTY</li>
+                            <li>苏州大学</li>
                             <div class="clearfix"></div>
                         </ul>   
                         <ul class="location">
                             <li><span class="glyphicon glyphicon-earphone"></span></li>
-                            <li>+0 561 111 235</li>
+                            <li>183 5229 9009</li>
                             <div class="clearfix"></div>
                         </ul>   
                         <ul class="location">
                             <li><span class="glyphicon glyphicon-envelope"></span></li>
-                            <li><a href="mailto:info@example.com">mail@example.com</a></li>
+                            <li><a href="mailto:info@example.com">360726539@qq.com</a></li>
                             <div class="clearfix"></div>
                         </ul>                       
                     </address>

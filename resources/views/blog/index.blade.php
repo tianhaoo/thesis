@@ -43,7 +43,7 @@
                         </div>
                         <div class="article-right">
                             <div class="article-title">
-                                <p>On {{ $post->created_at->format('F d, Y')}} <span class="glyphicon glyphicon-thumbs-up"></span>{{ $post->featured }}</a> by {{$post->author->name }}</p>
+                                <p>On {{ $post->created_at->format('F d, Y')}}  by {{$post->author->name }} <span class="glyphicon glyphicon-thumbs-up"></span>{{ $post->featured }}</a></p>
                                 <a class="title" href="/post/{{ $post->slug }}">{{ $post->title }}</a>
                             </div>
                             <div class="article-text">

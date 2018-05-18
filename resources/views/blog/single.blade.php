@@ -68,7 +68,7 @@
 			<div class="col-md-6 content-left single-post">
 				<div class="blog-posts">
 			<h3 class="post">{{ $post->title }}</h3>
-			<i class="fa fa-user"></i> {{ $post->author->name }} &nbsp; <i class="fa fa-calendar"></i> {{ $post->created_at->format('F d, Y')}} &nbsp; <i class="fa fa-comments"></i><span class="data">{{ count($comments) }}<a href="#comments"> Comments</a></span> &nbsp; <i class="fa fa-thumbs-up"></i><i id="thumb-featured"></i>{{ $post->featured }} <a id="thumbs" href="javascript:" onclick="thumbs({{ $post->id }})">Featured</a>&nbsp;
+			<i class="fa fa-user"></i> {{ $post->author->name }} &nbsp; <i class="fa fa-calendar"></i> {{ $post->created_at->format('F d, Y')}} &nbsp; <i class="fa fa-comments"></i><span class="data">{{ count($comments) }}<a href="#comments"> Comments</a></span> &nbsp; <i class="fa fa-thumbs-up"></i><i id="thumb-featured">{{ $post->featured }}</i> <a id="thumbs" href="javascript:" onclick="thumbs({{ $post->id }})">Featured</a>&nbsp;
                                 @if(isset($category->name))<i class="fa fa-archive"></i> {{ $category->name }}@endif @if(isset($post->annex))<i class="fa fa-folder"></i><a href="/storage/{{ json_decode(substr($post->annex, 1,strlen($post->annex)-2), true)['download_link'] }}">{{ json_decode(substr($post->annex, 1,strlen($post->annex)-2), true)['original_name'] }}</a> @endif 
                                 <hr>
             <!--异步加载点赞-->

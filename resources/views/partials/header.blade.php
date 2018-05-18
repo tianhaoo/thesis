@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="num">
-                    <p> Call us : 032 2352 782</p>
+                    <p> Call us : 183 5229 9009</p>
                 </div>
                 <div class="clearfix"></div>
 
