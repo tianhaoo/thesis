@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2018-05-18 10:55:39
+Date: 2018-05-18 12:22:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -55,13 +55,15 @@ CREATE TABLE `comments` (
   KEY `comments_user_id_foreign` (`user_id`),
   CONSTRAINT `comments_post_id_foreign` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE,
   CONSTRAINT `comments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of comments
 -- ----------------------------
 INSERT INTO `comments` VALUES ('22', '2', '2', 'fasdfasdf', '2018-05-16 06:04:05', '2018-05-16 06:04:05');
 INSERT INTO `comments` VALUES ('25', '3', '2', '阿斯顿发射点', '2018-05-16 07:29:10', '2018-05-16 07:29:10');
+INSERT INTO `comments` VALUES ('38', '2', '5', 'aSDasd ASD asdASD', '2018-05-18 11:36:56', '2018-05-18 11:36:56');
+INSERT INTO `comments` VALUES ('39', '19', '6', 'lalala', '2018-05-18 12:07:07', '2018-05-18 12:07:07');
 
 -- ----------------------------
 -- Table structure for `data_rows`
@@ -412,10 +414,13 @@ CREATE TABLE `permission_role` (
 -- Records of permission_role
 -- ----------------------------
 INSERT INTO `permission_role` VALUES ('1', '1');
+INSERT INTO `permission_role` VALUES ('1', '2');
 INSERT INTO `permission_role` VALUES ('1', '4');
+INSERT INTO `permission_role` VALUES ('1', '5');
 INSERT INTO `permission_role` VALUES ('2', '1');
 INSERT INTO `permission_role` VALUES ('3', '1');
 INSERT INTO `permission_role` VALUES ('4', '1');
+INSERT INTO `permission_role` VALUES ('4', '5');
 INSERT INTO `permission_role` VALUES ('5', '1');
 INSERT INTO `permission_role` VALUES ('6', '1');
 INSERT INTO `permission_role` VALUES ('7', '1');
@@ -423,46 +428,60 @@ INSERT INTO `permission_role` VALUES ('8', '1');
 INSERT INTO `permission_role` VALUES ('9', '1');
 INSERT INTO `permission_role` VALUES ('10', '1');
 INSERT INTO `permission_role` VALUES ('11', '1');
+INSERT INTO `permission_role` VALUES ('11', '5');
 INSERT INTO `permission_role` VALUES ('12', '1');
+INSERT INTO `permission_role` VALUES ('12', '5');
 INSERT INTO `permission_role` VALUES ('13', '1');
+INSERT INTO `permission_role` VALUES ('13', '5');
 INSERT INTO `permission_role` VALUES ('14', '1');
+INSERT INTO `permission_role` VALUES ('14', '5');
 INSERT INTO `permission_role` VALUES ('15', '1');
+INSERT INTO `permission_role` VALUES ('15', '5');
 INSERT INTO `permission_role` VALUES ('16', '1');
-INSERT INTO `permission_role` VALUES ('16', '4');
+INSERT INTO `permission_role` VALUES ('16', '5');
 INSERT INTO `permission_role` VALUES ('17', '1');
-INSERT INTO `permission_role` VALUES ('17', '4');
+INSERT INTO `permission_role` VALUES ('17', '5');
 INSERT INTO `permission_role` VALUES ('18', '1');
-INSERT INTO `permission_role` VALUES ('18', '4');
+INSERT INTO `permission_role` VALUES ('18', '5');
 INSERT INTO `permission_role` VALUES ('19', '1');
-INSERT INTO `permission_role` VALUES ('19', '4');
+INSERT INTO `permission_role` VALUES ('19', '5');
 INSERT INTO `permission_role` VALUES ('20', '1');
-INSERT INTO `permission_role` VALUES ('20', '4');
+INSERT INTO `permission_role` VALUES ('20', '5');
 INSERT INTO `permission_role` VALUES ('21', '1');
 INSERT INTO `permission_role` VALUES ('22', '1');
 INSERT INTO `permission_role` VALUES ('23', '1');
 INSERT INTO `permission_role` VALUES ('24', '1');
 INSERT INTO `permission_role` VALUES ('25', '1');
 INSERT INTO `permission_role` VALUES ('26', '1');
-INSERT INTO `permission_role` VALUES ('26', '4');
+INSERT INTO `permission_role` VALUES ('26', '2');
+INSERT INTO `permission_role` VALUES ('26', '5');
 INSERT INTO `permission_role` VALUES ('27', '1');
-INSERT INTO `permission_role` VALUES ('27', '4');
+INSERT INTO `permission_role` VALUES ('27', '2');
+INSERT INTO `permission_role` VALUES ('27', '5');
 INSERT INTO `permission_role` VALUES ('28', '1');
-INSERT INTO `permission_role` VALUES ('28', '4');
+INSERT INTO `permission_role` VALUES ('28', '2');
+INSERT INTO `permission_role` VALUES ('28', '5');
 INSERT INTO `permission_role` VALUES ('29', '1');
-INSERT INTO `permission_role` VALUES ('29', '4');
+INSERT INTO `permission_role` VALUES ('29', '2');
+INSERT INTO `permission_role` VALUES ('29', '5');
 INSERT INTO `permission_role` VALUES ('30', '1');
-INSERT INTO `permission_role` VALUES ('30', '4');
+INSERT INTO `permission_role` VALUES ('30', '2');
+INSERT INTO `permission_role` VALUES ('30', '5');
 INSERT INTO `permission_role` VALUES ('31', '1');
 INSERT INTO `permission_role` VALUES ('31', '2');
-INSERT INTO `permission_role` VALUES ('31', '4');
+INSERT INTO `permission_role` VALUES ('31', '5');
 INSERT INTO `permission_role` VALUES ('32', '1');
-INSERT INTO `permission_role` VALUES ('32', '4');
+INSERT INTO `permission_role` VALUES ('32', '2');
+INSERT INTO `permission_role` VALUES ('32', '5');
 INSERT INTO `permission_role` VALUES ('33', '1');
-INSERT INTO `permission_role` VALUES ('33', '4');
+INSERT INTO `permission_role` VALUES ('33', '2');
+INSERT INTO `permission_role` VALUES ('33', '5');
 INSERT INTO `permission_role` VALUES ('34', '1');
-INSERT INTO `permission_role` VALUES ('34', '4');
+INSERT INTO `permission_role` VALUES ('34', '2');
+INSERT INTO `permission_role` VALUES ('34', '5');
 INSERT INTO `permission_role` VALUES ('35', '1');
-INSERT INTO `permission_role` VALUES ('35', '4');
+INSERT INTO `permission_role` VALUES ('35', '2');
+INSERT INTO `permission_role` VALUES ('35', '5');
 INSERT INTO `permission_role` VALUES ('36', '1');
 INSERT INTO `permission_role` VALUES ('37', '1');
 INSERT INTO `permission_role` VALUES ('38', '1');
@@ -470,15 +489,20 @@ INSERT INTO `permission_role` VALUES ('39', '1');
 INSERT INTO `permission_role` VALUES ('40', '1');
 INSERT INTO `permission_role` VALUES ('41', '1');
 INSERT INTO `permission_role` VALUES ('42', '1');
-INSERT INTO `permission_role` VALUES ('42', '4');
+INSERT INTO `permission_role` VALUES ('42', '2');
+INSERT INTO `permission_role` VALUES ('42', '5');
 INSERT INTO `permission_role` VALUES ('43', '1');
-INSERT INTO `permission_role` VALUES ('43', '4');
+INSERT INTO `permission_role` VALUES ('43', '2');
+INSERT INTO `permission_role` VALUES ('43', '5');
 INSERT INTO `permission_role` VALUES ('44', '1');
-INSERT INTO `permission_role` VALUES ('44', '4');
+INSERT INTO `permission_role` VALUES ('44', '2');
+INSERT INTO `permission_role` VALUES ('44', '5');
 INSERT INTO `permission_role` VALUES ('45', '1');
-INSERT INTO `permission_role` VALUES ('45', '4');
+INSERT INTO `permission_role` VALUES ('45', '2');
+INSERT INTO `permission_role` VALUES ('45', '5');
 INSERT INTO `permission_role` VALUES ('46', '1');
-INSERT INTO `permission_role` VALUES ('46', '4');
+INSERT INTO `permission_role` VALUES ('46', '2');
+INSERT INTO `permission_role` VALUES ('46', '5');
 
 -- ----------------------------
 -- Table structure for `posts`
@@ -508,14 +532,14 @@ CREATE TABLE `posts` (
 -- ----------------------------
 -- Records of posts
 -- ----------------------------
-INSERT INTO `posts` VALUES ('1', '1', '1', 'Lorem Ipsum Post', null, 'This is the excerpt for the Lorem Ipsum Post', '<p>This is the body of the lorem ipsum post</p>', 'posts/post1.jpg', 'lorem-ipsum-post', 'This is the meta description', 'keyword1, keyword2, keyword3', 'PUBLISHED', '20', '2018-05-08 21:48:55', '2018-05-11 04:04:40', null);
-INSERT INTO `posts` VALUES ('2', '1', '2', 'My Sample Post', null, 'This is the excerpt for阿斯顿发射点官方啊 the sample Post', '<table style=\"height: 19px; border-color: black;\" width=\"975\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 91px;\">时刻提防感觉</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">2354</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">456</td>\r\n<td style=\"width: 91px;\">675</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 92px;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">啊手动阀</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">a啊手动阀</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">苏大f</td>\r\n<td style=\"width: 91px;\">发</td>\r\n<td style=\"width: 91px;\">&nbsp;撒旦发个</td>\r\n<td style=\"width: 92px;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;啊大哥&nbsp;</td>\r\n<td style=\"width: 92px;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;啊打发时光</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 92px;\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>', 'posts/post2.jpg', 'my-sample-post', 'Meta Description for sample post', 'keyword1, keyword2, keyword3', 'PUBLISHED', '1', '2018-05-08 21:48:55', '2018-05-18 02:15:03', null);
-INSERT INTO `posts` VALUES ('3', '1', '2', 'Latest Post', null, 'This is the excerpt for the latest post', '# asdfasdfThis is the body for the latest post\r\naksdjhfkajshdf\r\n\r\n阿斯达克警方和喀什地方\r\n\r\n阿斯蒂芬哈克斯的\r\n2\r\n333\r\n### 的说法是都会发生的', 'posts/post3.jpg', 'latest-post', 'This is the meta description', 'keyword1, keyword2, keyword3', 'PUBLISHED', '1', '2018-05-08 21:48:55', '2018-05-16 07:15:04', null);
-INSERT INTO `posts` VALUES ('4', '1', '2', 'Yarr Post', null, 'Reef sails nipperkin bring a spring upon her cable coffer jury mast spike marooned Pieces of Eight poop deck pillage. Clipper driver coxswain galleon hempen halter come about pressgang gangplank boatswain swing the lead. Nipperkin yard skysail swab lanyard Blimey bilge water ho quarter Buccaneer.', '阿斯顿放款快捷回复顶顶顶顶顶顶顶顶顶顶\r\n阿三地方烦烦烦烦烦烦烦烦烦烦烦烦烦烦烦尽快回来和急急急急急急急急急急急急急急急急急急', 'posts/post4.jpg', 'yarr-post', 'this be a meta descript', 'keyword1, keyword2, keyword3', 'PUBLISHED', '2', '2018-05-08 21:48:55', '2018-05-17 13:40:41', null);
-INSERT INTO `posts` VALUES ('16', '2', '2', 'a\'s\'d\'fa\'s\'d', null, '啊手动阀手动阀', '<p>&nbsp;啊手动阀啊手动阀手动分</p>', null, '嗲山东巨力放假啊送到', null, null, 'PUBLISHED', '0', '2018-05-18 10:42:04', '2018-05-18 10:42:04', null);
-INSERT INTO `posts` VALUES ('17', '2', '2', '啊手动阀第三方', null, '阀手动阀手动分', '<p>&nbsp;啊手动阀啊手动阀</p>', null, 'dfghsfg', null, null, 'PUBLISHED', '0', '2018-05-18 10:42:24', '2018-05-18 10:42:24', null);
+INSERT INTO `posts` VALUES ('1', '3', '1', 'Lorem Ipsum Post', null, 'This is the excerpt for the Lorem Ipsum Post', '<p>This is the body of the lorem ipsum post</p>', 'posts/post1.jpg', 'lorem-ipsum-post', 'This is the meta description', 'keyword1, keyword2, keyword3', 'PUBLISHED', '21', '2018-05-08 21:48:55', '2018-05-18 12:04:07', null);
+INSERT INTO `posts` VALUES ('2', '3', '2', 'My Sample Post', null, 'This is the excerpt for阿斯顿发射点官方啊 the sample Post', '<table style=\"height: 19px; border-color: black;\" width=\"975\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 91px;\">时刻提防感觉</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">2354</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">456</td>\r\n<td style=\"width: 91px;\">675</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 92px;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">啊手动阀</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">a啊手动阀</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">苏大f</td>\r\n<td style=\"width: 91px;\">发</td>\r\n<td style=\"width: 91px;\">&nbsp;撒旦发个</td>\r\n<td style=\"width: 92px;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;啊大哥&nbsp;</td>\r\n<td style=\"width: 92px;\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 91px;\">&nbsp;啊打发时光</td>\r\n<td style=\"width: 91px;\">&nbsp;</td>\r\n<td style=\"width: 92px;\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>', 'posts/post2.jpg', 'my-sample-post', 'Meta Description for sample post', 'keyword1, keyword2, keyword3', 'PUBLISHED', '2', '2018-05-08 21:48:55', '2018-05-18 12:04:16', null);
+INSERT INTO `posts` VALUES ('3', '2', '2', 'Latest Post', null, 'This is the excerpt for the latest post', '# asdfasdfThis is the body for the latest post\r\naksdjhfkajshdf\r\n\r\n阿斯达克警方和喀什地方\r\n\r\n阿斯蒂芬哈克斯的\r\n2\r\n333\r\n### 的说法是都会发生的', 'posts/post3.jpg', 'latest-post', 'This is the meta description', 'keyword1, keyword2, keyword3', 'PUBLISHED', '2', '2018-05-08 21:48:55', '2018-05-18 12:06:46', null);
+INSERT INTO `posts` VALUES ('4', '4', '2', 'Yarr Post', null, 'Reef sails nipperkin bring a spring upon her cable coffer jury mast spike marooned Pieces of Eight poop deck pillage. Clipper driver coxswain galleon hempen halter come about pressgang gangplank boatswain swing the lead. Nipperkin yard skysail swab lanyard Blimey bilge water ho quarter Buccaneer.', '阿斯顿放款快捷回复顶顶顶顶顶顶顶顶顶顶\r\n阿三地方烦烦烦烦烦烦烦烦烦烦烦烦烦烦烦尽快回来和急急急急急急急急急急急急急急急急急急', 'posts/post4.jpg', 'yarr-post', 'this be a meta descript', 'keyword1, keyword2, keyword3', 'PUBLISHED', '2', '2018-05-08 21:48:55', '2018-05-17 13:40:41', null);
+INSERT INTO `posts` VALUES ('16', '2', '2', 'a\'s\'d\'fa\'s\'d', null, '啊手动阀手动阀', '<p>&nbsp;啊手动阀啊手动阀手动分</p>', null, '嗲山东巨力放假啊送到', null, null, 'PUBLISHED', '1', '2018-05-18 10:42:04', '2018-05-18 12:18:02', null);
+INSERT INTO `posts` VALUES ('17', '3', '2', '啊手动阀第三方', null, '阀手动阀手动分', '<p>&nbsp;啊手动阀啊手动阀</p>', null, 'dfghsfg', null, null, 'PUBLISHED', '0', '2018-05-18 10:42:24', '2018-05-18 10:42:24', null);
 INSERT INTO `posts` VALUES ('18', '2', '2', 'asdfads', null, 'asdf asdf', '<p>asdf asdf&nbsp;</p>', null, 'asdsdf asd', null, null, 'PUBLISHED', '0', '2018-05-18 10:47:40', '2018-05-18 10:47:40', null);
-INSERT INTO `posts` VALUES ('19', '2', '2', 'asdfasdf asd', null, 'asdfasdf asdf', '<p>sad fasdf asdf&nbsp;</p>', null, 'asdfasdfadsfasd', null, null, 'PUBLISHED', '0', '2018-05-18 10:48:00', '2018-05-18 10:48:00', null);
+INSERT INTO `posts` VALUES ('19', '2', '2', 'asdfasdf asd', null, 'asdfasdf asdf', '<p>sad fasdf asdf&nbsp;</p>', null, 'asdfasdfadsfasd', null, null, 'PUBLISHED', '1', '2018-05-18 10:48:00', '2018-05-18 12:06:56', null);
 INSERT INTO `posts` VALUES ('20', '2', '2', 'asdfasdfasdf', null, 'asdfasdfasdf', '<p>asdfa sd fasdf</p>', null, 'asdfasdfasdf', null, null, 'PUBLISHED', '0', '2018-05-18 10:48:14', '2018-05-18 10:48:14', null);
 
 -- ----------------------------
@@ -556,14 +580,15 @@ CREATE TABLE `roles` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `roles_name_unique` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of roles
 -- ----------------------------
-INSERT INTO `roles` VALUES ('1', 'admin', 'Administrator', '2018-05-08 21:48:54', '2018-05-08 21:48:54');
-INSERT INTO `roles` VALUES ('2', 'guest', 'Guest', '2018-05-08 21:48:54', '2018-05-16 06:41:53');
-INSERT INTO `roles` VALUES ('4', 'user', 'Normal User', '2018-05-16 06:43:49', '2018-05-16 06:43:49');
+INSERT INTO `roles` VALUES ('1', 'admin', '超级管理员', '2018-05-08 21:48:54', '2018-05-18 12:16:34');
+INSERT INTO `roles` VALUES ('2', 'member', '网站用户', '2018-05-08 21:48:54', '2018-05-18 12:16:51');
+INSERT INTO `roles` VALUES ('4', 'user', '只有浏览权限的游客', '2018-05-16 06:43:49', '2018-05-18 12:16:18');
+INSERT INTO `roles` VALUES ('5', 'manager', '运维管理员', '2018-05-18 11:45:13', '2018-05-18 12:15:56');
 
 -- ----------------------------
 -- Table structure for `settings`
@@ -685,15 +710,17 @@ CREATE TABLE `users` (
   UNIQUE KEY `users_email_unique` (`email`),
   KEY `users_role_id_foreign` (`role_id`),
   CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '1', 'Admin', 'admin@admin.com', 'users/default.png', '$2y$10$TEOHv6E6Y6o5BiF38Ln94uu1UJ2XAWdJY1d54e3roTurFxACh5lGi', 'woXhvHdYsH3j81BrdEw2DkArUtGEqfSChKbiffL8Bk7R932DgPn6PzC3m7VL', null, '2018-05-08 21:48:55', '2018-05-08 21:48:55');
-INSERT INTO `users` VALUES ('2', '1', 'Tianhaoo', '360726539@qq.com', 'users/default.png', '$2y$10$CpNFmqvwY7g12UcDb009gOe7W648LB0By5mhbQknHFxfFyEczZ55.', 'JzA4lJKrtaPsiK6sZuYMDCVJfeKS1KvtFRmroDWRw2OG7Py5ygHKL1muU2Li', '{\"locale\":\"en\"}', '2018-05-08 21:55:18', '2018-05-08 21:55:18');
-INSERT INTO `users` VALUES ('3', '4', 'xiaoliu', '123@456.com', 'users/default.png', '$2y$10$cFFudJGlLMncvp.9VOjoIOiOqVvmfkdyvi97yoejYJC6BnpNKjsAC', 'TrKP5VUuoU1czJnp2oacSyx6VGmfrVGzxw2t5ORlS4mtH0LhLd3gedOKqLCU', '{\"locale\":\"en\"}', '2018-05-16 06:11:01', '2018-05-16 06:44:16');
+INSERT INTO `users` VALUES ('2', '1', 'Tianhaoo', '360726539@qq.com', 'users/default.png', '$2y$10$CpNFmqvwY7g12UcDb009gOe7W648LB0By5mhbQknHFxfFyEczZ55.', 'seK6RGEavtj2TT26yjh3woWB4dvXMW0jSsr5sby4z2P6GXZkNQzhhGoTnKEx', '{\"locale\":\"en\"}', '2018-05-08 21:55:18', '2018-05-08 21:55:18');
+INSERT INTO `users` VALUES ('3', '5', 'xiaoliu', '123@456.com', 'users/default.png', '$2y$10$cFFudJGlLMncvp.9VOjoIOiOqVvmfkdyvi97yoejYJC6BnpNKjsAC', 'ikXCj5fO4jmrTCWDC7g5utv9odeh5vegQU10kUgE4QFqIpS9nbZTJQojwrMS', '{\"locale\":\"en\"}', '2018-05-16 06:11:01', '2018-05-18 11:57:15');
 INSERT INTO `users` VALUES ('4', '2', 'xiaowang', '123425678@qq.com', 'users/default.png', '$2y$10$T/WTaIIj82R138xDAAHYzOvXaRckGkFjHaeFy0CA3mo88UZ0ANrwS', 'D6uYrCljGFwQaQTnO0YnkjWc8hNT7B0klHbcwOqomHpuQYA5ZbVjFauwk9Tu', null, '2018-05-16 06:39:50', '2018-05-16 06:39:50');
+INSERT INTO `users` VALUES ('5', '4', 'wangwang', '12@34.com', 'users/default.png', '$2y$10$e4mLSC4CVY59mcOh8BjPp.9hsOKIJ3wia7AxKZGDzuXiA5dwZZV5S', 'MatdKPuJK69Z5DdturyDXFqiJAEzn9Y5oq1UCBxixWGt2FVImdLQKGqdvSlC', '{\"locale\":\"zh_CN\"}', '2018-05-18 11:28:00', '2018-05-18 11:28:56');
+INSERT INTO `users` VALUES ('6', '4', 'guest', '12345@6789.com', 'users/default.png', '$2y$10$jyziivTUcG3H7s4HJWRr/O17eFZtuuJvuv3.ds35MurWOuHDp0Yzi', 'OgQEmoebxALYACaN1Pg5Ve2mDTrvDUf7KonFq49ChOQ8YJGEoaEW9E1RDNiZ', null, '2018-05-18 12:03:19', '2018-05-18 12:03:19');
+INSERT INTO `users` VALUES ('7', '2', '1@1.com', '1@1.com', 'users/default.png', '$2y$10$1CHrugN1xLKCRpPNxM5Ayu3ghZa/ah7rfygMs9qOpt1tmTQZUeOKi', 'rRYH2sioWopFLNvMJBqz8ku41eJB0w5eDorRpwU1TE6wX6tnGz712v8xliHM', '{\"locale\":\"en\"}', '2018-05-18 12:11:42', '2018-05-18 12:12:21');
 
 -- ----------------------------
 -- Table structure for `user_post_thumbs`
@@ -717,6 +744,11 @@ INSERT INTO `user_post_thumbs` VALUES ('2', '1', '2018-05-11 04:04:40', '2018-05
 INSERT INTO `user_post_thumbs` VALUES ('2', '2', '2018-05-11 04:04:47', '2018-05-11 04:04:47');
 INSERT INTO `user_post_thumbs` VALUES ('2', '3', '2018-05-11 04:04:59', '2018-05-11 04:04:59');
 INSERT INTO `user_post_thumbs` VALUES ('2', '4', '2018-05-17 13:40:41', '2018-05-17 13:40:41');
+INSERT INTO `user_post_thumbs` VALUES ('2', '16', '2018-05-18 12:18:02', '2018-05-18 12:18:02');
+INSERT INTO `user_post_thumbs` VALUES ('6', '1', '2018-05-18 12:04:07', '2018-05-18 12:04:07');
+INSERT INTO `user_post_thumbs` VALUES ('6', '2', '2018-05-18 12:04:16', '2018-05-18 12:04:16');
+INSERT INTO `user_post_thumbs` VALUES ('6', '3', '2018-05-18 12:06:46', '2018-05-18 12:06:46');
+INSERT INTO `user_post_thumbs` VALUES ('6', '19', '2018-05-18 12:06:56', '2018-05-18 12:06:56');
 
 -- ----------------------------
 -- Table structure for `user_roles`
