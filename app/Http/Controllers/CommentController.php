@@ -15,7 +15,7 @@ class CommentController extends Controller
     	$comment->post_id = $request->post_id;
     	$comment->content = $request->content;
     	if($comment->save())
-    		return back()->with('status_successful', 'Comment successfully added!');
+    		return back()->with('status_successful', '评论添加成功');
     	else
     		return back()->with('status_fail', 'Something Wrong happened!');
 
@@ -27,7 +27,7 @@ class CommentController extends Controller
     	
     	if($comment->user_id = Auth::id()){    		
 	    	if($comment->delete())
-	    		return back()->with('status_successful', 'Comment successfully deleted!');
+	    		return back()->with('status_successful', '删除评论成功');
 	    	else
 	    		return back()->with('status_fail', 'Something Wrong happened!');
     	}

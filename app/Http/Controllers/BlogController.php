@@ -27,12 +27,12 @@ class BlogController extends Controller
     public function index(){
 
         $posts = Post::simplePaginate(8);
-        $featuredPosts = Post::featuredPosts(4);
-        $latestPosts = Post::latestPosts(4);
+        $featuredPosts = Post::featuredPosts(7);
+        $latestPosts = Post::latestPosts(7);
         $tags = Tag::all();
         $categories = Category::all();
 
-    	return view('blog.index', ['posts' => $posts, 'featuredPosts' => $featuredPosts, 'latestPosts' => $latestPosts, 'tags' => $tags, 'categories' => $categories]);
+    	return view('blog.index', ['posts' => $posts, 'featuredPosts' => $featuredPosts, 'latestPosts' => $latestPosts, 'tags' => $tags, 'categories' => $categories, 'title' => 'All Posts']);
     }
 
     public function show($slug){
@@ -42,8 +42,8 @@ class BlogController extends Controller
 
         $categories = Category::all();
 
-        $featuredPosts = Post::featuredPosts(4);
-        $latestPosts = Post::latestPosts(4);
+        $featuredPosts = Post::featuredPosts(7);
+        $latestPosts = Post::latestPosts(7);
         $tags = Tag::all();
 
         foreach($comments as $comment){
@@ -51,34 +51,34 @@ class BlogController extends Controller
             $comment['name'] = User::find($comment['user_id'])->name;
         }
 
-        return view('blog.single', ['post' => $post, 'featuredPosts' => $featuredPosts, 'latestPosts' => $latestPosts, 'tags' => $tags, 'comments' => $comments, 'category' => $category, 'categories' => $categories, 'nav' => $post->title]);
+        return view('blog.single', ['post' => $post, 'featuredPosts' => $featuredPosts, 'latestPosts' => $latestPosts, 'tags' => $tags, 'comments' => $comments, 'category' => $category, 'categories' => $categories, 'title' => $post->title]);
     }
 
     public function tagShow($tag) {
 
-        $featuredPosts = Post::featuredPosts(4);
-        $latestPosts = Post::latestPosts(4);
+        $featuredPosts = Post::featuredPosts(7);
+        $latestPosts = Post::latestPosts(7);
         $tags = Tag::all();
         $categories = Category::all();
 
         $tag = Tag::where('name', $tag)->first();
-        $posts = $tag->posts->all();
+        $posts = $tag->posts;
 
 
 
-        return view('blog.index', ['posts' => $posts, 'featuredPosts' => $featuredPosts, 'latestPosts' => $latestPosts, 'tags' => $tags, 'categories' => $categories, 'nav' => 'tags']);     
+        return view('blog.index', ['posts' => $posts, 'featuredPosts' => $featuredPosts, 'latestPosts' => $latestPosts, 'tags' => $tags, 'categories' => $categories, 'title' => $tag->name]);     
     }
 
     public function categoryShow ($id) {
-        $featuredPosts = Post::featuredPosts(4);
-        $latestPosts = Post::latestPosts(4);
+        $featuredPosts = Post::featuredPosts(7);
+        $latestPosts = Post::latestPosts(7);
         $tags = Tag::all();
         $categories = Category::all();
 
         $category = Category::find($id);
         $posts = $category->posts;
 
-        return view('blog.index', ['posts' => $posts, 'featuredPosts' => $featuredPosts, 'latestPosts' => $latestPosts, 'tags' => $tags, 'categories' => $categories, 'nav' => 'categories']); 
+        return view('blog.index', ['posts' => $posts, 'featuredPosts' => $featuredPosts, 'latestPosts' => $latestPosts, 'tags' => $tags, 'categories' => $categories, 'title' => $category->name]); 
 
     }
 
