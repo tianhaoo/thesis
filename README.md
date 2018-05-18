@@ -1,9 +1,16 @@
-### 下载必要的模板文件，安装voyager
-`--with-dummy`
+#### 改了源码
 
-### 将js和css拷贝到public文件夹
+`C:\Bitnami\wampstack-7.1.8-0\apache2\htdocs\thesis\vendor\tcg\voyager\src\Http\Controllers\VoyagerDatabaseController.php`
+
+403行
 
 ```
-php artisan make:auth
+        // Delete Files
+        foreach ($dataType->deleteRows->where('type', 'file') as $row) {
+            if(isset($data->{$row->field})) {
+                foreach (json_decode($data->{$row->field}) as $file) {
+                    $this->deleteFileIfExists($file->download_link);
+                }
+            }
+        }
 ```
-
